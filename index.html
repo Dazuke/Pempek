@@ -1,0 +1,977 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Pempek Kita — Rasa Palembang</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<header class="navbar" id="navbar">
+
+    <a href="#" class="logo">
+        <div class="logo-icon">P</div>
+        <div>
+            <strong>PEMPEK</strong>
+            <span>KITA</span>
+        </div>
+    </a>
+
+    <nav class="nav-menu">
+        <a href="#menu">Menu</a>
+        <a href="#proses">Proses</a>
+        <a href="#keunggulan">Keunggulan</a>
+        <a href="#pesan">Cara Pesan</a>
+        <a href="#kontak">Kontak</a>
+    </nav>
+
+    <a href="#menu" class="nav-button">
+        Pesan Sekarang
+    </a>
+
+    <button class="hamburger" id="hamburger">
+        ☰
+    </button>
+
+</header>
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <div class="badge">
+            ✦ PEMPEK ASLI PALEMBANG
+        </div>
+
+        <h1>
+            Rasa Palembang,
+            <span>Untuk Semua.</span>
+        </h1>
+
+        <p>
+            Pempek dengan cita rasa khas Palembang,
+            dibuat dari bahan pilihan dan disajikan
+            dengan cuko yang gurih, asam, dan pedas.
+        </p>
+
+        <div class="hero-buttons">
+            <a href="#menu" class="button primary">
+                Lihat Menu →
+            </a>
+
+            <a href="#proses" class="button secondary">
+                Kenapa Kami?
+            </a>
+        </div>
+
+        <div class="hero-info">
+
+            <div>
+                <strong>100%</strong>
+                <span>Ikan Pilihan</span>
+            </div>
+
+            <div>
+                <strong>Fresh</strong>
+                <span>Setiap Hari</span>
+            </div>
+
+            <div>
+                <strong>Halal</strong>
+                <span>Untuk Keluarga</span>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="hero-image">
+
+        <!-- GANTI FOTO INI DENGAN FOTO PEMPEK KAMU -->
+        <img
+            src="https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=1000&q=80"
+            alt="Pempek">
+
+        <div class="floating-card">
+            <span>⭐</span>
+
+            <div>
+                <strong>Rasa Otentik</strong>
+                <small>Khas Palembang</small>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= MENU ================= -->
+
+<section class="section menu-section" id="menu">
+
+    <div class="section-heading">
+
+        <div>
+            <span class="eyebrow">MENU KAMI</span>
+
+            <h2>
+                Pilihan Favorit
+                <span>Hari Ini</span>
+            </h2>
+        </div>
+
+        <p>
+            Pilih pempek favoritmu dan nikmati
+            cita rasa khas Palembang.
+        </p>
+
+    </div>
+
+
+    <div class="category-buttons">
+
+        <button class="category active" data-filter="all">
+            Semua
+        </button>
+
+        <button class="category" data-filter="pempek">
+            Pempek
+        </button>
+
+        <button class="category" data-filter="paket">
+            Paket
+        </button>
+
+        <button class="category" data-filter="minuman">
+            Minuman
+        </button>
+
+    </div>
+
+
+    <div class="products">
+
+        <article class="product-card" data-category="pempek">
+
+            <div class="product-image">
+                <img
+                    src="https://images.unsplash.com/photo-1601050690117-94f5f6fa8bd7?auto=format&fit=crop&w=700&q=80"
+                    alt="Pempek Kapal Selam">
+
+                <span class="product-tag">
+                    Favorit
+                </span>
+            </div>
+
+            <div class="product-content">
+
+                <span>Pempek</span>
+
+                <h3>Pempek Kapal Selam</h3>
+
+                <p>
+                    Pempek dengan isian telur
+                    dan cuko khas.
+                </p>
+
+                <div class="product-bottom">
+
+                    <strong>
+                        Rp18.000
+                    </strong>
+
+                    <button
+                        class="order-button"
+                        data-product="Pempek Kapal Selam">
+                        +
+                    </button>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <article class="product-card" data-category="pempek">
+
+            <div class="product-image">
+                <img
+                    src="https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=700&q=80"
+                    alt="Pempek Lenjer">
+
+            </div>
+
+            <div class="product-content">
+
+                <span>Pempek</span>
+
+                <h3>Pempek Lenjer</h3>
+
+                <p>
+                    Tekstur kenyal dengan rasa
+                    ikan yang gurih.
+                </p>
+
+                <div class="product-bottom">
+
+                    <strong>
+                        Rp15.000
+                    </strong>
+
+                    <button
+                        class="order-button"
+                        data-product="Pempek Lenjer">
+                        +
+                    </button>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <article class="product-card" data-category="pempek">
+
+            <div class="product-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?auto=format&fit=crop&w=700&q=80"
+                    alt="Pempek Kulit">
+
+            </div>
+
+            <div class="product-content">
+
+                <span>Pempek</span>
+
+                <h3>Pempek Kulit</h3>
+
+                <p>
+                    Gurih, renyah di luar,
+                    lembut di dalam.
+                </p>
+
+                <div class="product-bottom">
+
+                    <strong>
+                        Rp12.000
+                    </strong>
+
+                    <button
+                        class="order-button"
+                        data-product="Pempek Kulit">
+                        +
+                    </button>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <article class="product-card" data-category="paket">
+
+            <div class="product-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=700&q=80"
+                    alt="Paket Pempek">
+
+                <span class="product-tag">
+                    Hemat
+                </span>
+
+            </div>
+
+            <div class="product-content">
+
+                <span>Paket</span>
+
+                <h3>Paket Keluarga</h3>
+
+                <p>
+                    Kombinasi pempek untuk
+                    dinikmati bersama.
+                </p>
+
+                <div class="product-bottom">
+
+                    <strong>
+                        Rp75.000
+                    </strong>
+
+                    <button
+                        class="order-button"
+                        data-product="Paket Keluarga">
+                        +
+                    </button>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <article class="product-card" data-category="minuman">
+
+            <div class="product-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1556679343-c7306c1976bc?auto=format&fit=crop&w=700&q=80"
+                    alt="Es Teh">
+
+            </div>
+
+            <div class="product-content">
+
+                <span>Minuman</span>
+
+                <h3>Es Teh Manis</h3>
+
+                <p>
+                    Minuman segar untuk
+                    menemani pempek.
+                </p>
+
+                <div class="product-bottom">
+
+                    <strong>
+                        Rp7.000
+                    </strong>
+
+                    <button
+                        class="order-button"
+                        data-product="Es Teh Manis">
+                        +
+                    </button>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <article class="product-card" data-category="minuman">
+
+            <div class="product-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1621263764928-df1444c5e859?auto=format&fit=crop&w=700&q=80"
+                    alt="Es Jeruk">
+
+            </div>
+
+            <div class="product-content">
+
+                <span>Minuman</span>
+
+                <h3>Es Jeruk</h3>
+
+                <p>
+                    Segar dan cocok diminum
+                    bersama pempek.
+                </p>
+
+                <div class="product-bottom">
+
+                    <strong>
+                        Rp8.000
+                    </strong>
+
+                    <button
+                        class="order-button"
+                        data-product="Es Jeruk">
+                        +
+                    </button>
+
+                </div>
+
+            </div>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+<!-- ================= STORY ================= -->
+
+<section class="story" id="proses">
+
+    <div class="story-image">
+
+        <img
+            src="https://images.unsplash.com/photo-1601050690122-8b0a5e4c7f2a?auto=format&fit=crop&w=1000&q=80"
+            alt="Proses makanan">
+
+    </div>
+
+
+    <div class="story-content">
+
+        <span class="eyebrow">
+            DIBUAT DENGAN HATI
+        </span>
+
+        <h2>
+            Dari Ikan Pilihan
+            Menjadi Rasa
+            <span>Istimewa.</span>
+        </h2>
+
+        <p>
+            Kami percaya makanan yang enak dimulai
+            dari bahan yang berkualitas. Karena itu,
+            setiap pempek dibuat dengan perhatian
+            dari proses awal hingga siap disajikan.
+        </p>
+
+
+        <div class="steps">
+
+            <div class="step">
+
+                <div class="step-number">
+                    01
+                </div>
+
+                <div>
+                    <h3>Pilih bahan terbaik</h3>
+
+                    <p>
+                        Ikan pilihan menjadi dasar
+                        rasa pempek kami.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="step">
+
+                <div class="step-number">
+                    02
+                </div>
+
+                <div>
+                    <h3>Diolah setiap hari</h3>
+
+                    <p>
+                        Adonan dibuat fresh untuk
+                        menjaga kualitas.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="step">
+
+                <div class="step-number">
+                    03
+                </div>
+
+                <div>
+                    <h3>Siap dinikmati</h3>
+
+                    <p>
+                        Disajikan bersama cuko
+                        khas Palembang.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= KEUNGGULAN ================= -->
+
+<section class="section advantages" id="keunggulan">
+
+    <div class="center-heading">
+
+        <span class="eyebrow">
+            KENAPA KAMI?
+        </span>
+
+        <h2>
+            Bukan Sekadar
+            <span>Pempek.</span>
+        </h2>
+
+        <p>
+            Kami ingin membawa rasa khas Palembang
+            lebih dekat kepada semua orang.
+        </p>
+
+    </div>
+
+
+    <div class="advantage-grid">
+
+        <div class="advantage-card">
+
+            <div class="advantage-icon">
+                🐟
+            </div>
+
+            <h3>Bahan Berkualitas</h3>
+
+            <p>
+                Menggunakan bahan pilihan
+                untuk menjaga cita rasa.
+            </p>
+
+        </div>
+
+
+        <div class="advantage-card">
+
+            <div class="advantage-icon">
+                ✨
+            </div>
+
+            <h3>Fresh Setiap Hari</h3>
+
+            <p>
+                Produk dibuat dengan proses
+                yang terjaga setiap hari.
+            </p>
+
+        </div>
+
+
+        <div class="advantage-card">
+
+            <div class="advantage-icon">
+                ❤️
+            </div>
+
+            <h3>Dibuat Dengan Hati</h3>
+
+            <p>
+                Mengutamakan rasa dan
+                kepuasan pelanggan.
+            </p>
+
+        </div>
+
+
+        <div class="advantage-card">
+
+            <div class="advantage-icon">
+                🌎
+            </div>
+
+            <h3>Palembang to the World</h3>
+
+            <p>
+                Membawa makanan khas daerah
+                agar dikenal lebih luas.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= DELIVERY ================= -->
+
+<section class="delivery">
+
+    <div>
+
+        <span class="eyebrow">
+            PESAN ANTAR
+        </span>
+
+        <h2>
+            Rasa Palembang
+            <span>Sampai ke Rumah.</span>
+        </h2>
+
+        <p>
+            Tidak sempat datang langsung?
+            Pesan secara online dan nikmati
+            pempek favoritmu dari rumah.
+        </p>
+
+        <a
+            href="https://wa.me/6281234567890"
+            target="_blank"
+            class="button white">
+            Pesan via WhatsApp →
+        </a>
+
+    </div>
+
+
+    <div class="delivery-number">
+
+        <strong>1–3</strong>
+
+        <span>
+            Hari estimasi<br>
+            pengiriman
+        </span>
+
+    </div>
+
+</section>
+
+
+<!-- ================= CARA PESAN ================= -->
+
+<section class="section order-section" id="pesan">
+
+    <div class="center-heading">
+
+        <span class="eyebrow">
+            MUDAH & CEPAT
+        </span>
+
+        <h2>
+            Cara <span>Pesan.</span>
+        </h2>
+
+    </div>
+
+
+    <div class="order-steps">
+
+        <div class="order-step">
+
+            <span>01</span>
+
+            <h3>Pilih Menu</h3>
+
+            <p>
+                Tentukan pempek dan
+                menu favoritmu.
+            </p>
+
+        </div>
+
+
+        <div class="order-step">
+
+            <span>02</span>
+
+            <h3>Hubungi Kami</h3>
+
+            <p>
+                Kirim pesanan melalui
+                WhatsApp.
+            </p>
+
+        </div>
+
+
+        <div class="order-step">
+
+            <span>03</span>
+
+            <h3>Konfirmasi</h3>
+
+            <p>
+                Kami akan mengonfirmasi
+                pesananmu.
+            </p>
+
+        </div>
+
+
+        <div class="order-step">
+
+            <span>04</span>
+
+            <h3>Pembayaran</h3>
+
+            <p>
+                Lakukan pembayaran
+                sesuai total pesanan.
+            </p>
+
+        </div>
+
+
+        <div class="order-step">
+
+            <span>05</span>
+
+            <h3>Pesanan Dikirim</h3>
+
+            <p>
+                Tunggu pempek favoritmu
+                sampai di tujuan.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= LOCATION ================= -->
+
+<section class="location" id="kontak">
+
+    <div class="location-info">
+
+        <span class="eyebrow">
+            KUNJUNGI KAMI
+        </span>
+
+        <h2>
+            Temukan Kami
+            <span>di Palembang.</span>
+        </h2>
+
+        <p>
+            Datang langsung untuk menikmati
+            pempek hangat bersama keluarga
+            dan teman.
+        </p>
+
+
+        <div class="contact-list">
+
+            <div>
+                <span>📍</span>
+
+                <div>
+                    <small>Alamat</small>
+                    <strong>
+                        Palembang, Sumatera Selatan
+                    </strong>
+                </div>
+            </div>
+
+
+            <div>
+                <span>🕐</span>
+
+                <div>
+                    <small>Jam Buka</small>
+                    <strong>
+                        Setiap Hari · 07.00–20.00
+                    </strong>
+                </div>
+            </div>
+
+
+            <div>
+                <span>💬</span>
+
+                <div>
+                    <small>WhatsApp</small>
+                    <strong>
+                        +62 812-3456-7890
+                    </strong>
+                </div>
+            </div>
+
+        </div>
+
+
+        <a
+            href="https://maps.google.com"
+            target="_blank"
+            class="button primary">
+            Buka Google Maps →
+        </a>
+
+    </div>
+
+
+    <div class="map-box">
+
+        <div class="map-placeholder">
+
+            <div class="map-pin">
+                📍
+            </div>
+
+            <strong>
+                Pempek Kita
+            </strong>
+
+            <span>
+                Palembang, Sumatera Selatan
+            </span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FAQ ================= -->
+
+<section class="section faq-section">
+
+    <div class="center-heading">
+
+        <span class="eyebrow">
+            FAQ
+        </span>
+
+        <h2>
+            Yang Sering
+            <span>Ditanyakan.</span>
+        </h2>
+
+    </div>
+
+
+    <div class="faq">
+
+        <div class="faq-item">
+
+            <button class="faq-question">
+                Pempek dibuat dari ikan apa?
+                <span>+</span>
+            </button>
+
+            <div class="faq-answer">
+                <p>
+                    Pempek kami menggunakan ikan pilihan
+                    yang diolah menjadi adonan khas Palembang.
+                </p>
+            </div>
+
+        </div>
+
+
+        <div class="faq-item">
+
+            <button class="faq-question">
+                Apakah bisa pesan untuk luar kota?
+                <span>+</span>
+            </button>
+
+            <div class="faq-answer">
+                <p>
+                    Bisa. Hubungi WhatsApp kami untuk
+                    mengecek tujuan dan pilihan pengiriman.
+                </p>
+            </div>
+
+        </div>
+
+
+        <div class="faq-item">
+
+            <button class="faq-question">
+                Apakah tersedia makan di tempat?
+                <span>+</span>
+            </button>
+
+            <div class="faq-answer">
+                <p>
+                    Tentu. Kamu bisa datang langsung
+                    dan menikmati pempek di tempat.
+                </p>
+            </div>
+
+        </div>
+
+
+        <div class="faq-item">
+
+            <button class="faq-question">
+                Bagaimana cara memesan?
+                <span>+</span>
+            </button>
+
+            <div class="faq-answer">
+                <p>
+                    Pilih menu kemudian klik tombol
+                    pesan untuk menghubungi kami melalui WhatsApp.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <div class="footer-main">
+
+        <div class="footer-brand">
+
+            <a href="#" class="logo footer-logo">
+
+                <div class="logo-icon">
+                    P
+                </div>
+
+                <div>
+                    <strong>PEMPEK</strong>
+                    <span>KITA</span>
+                </div>
+
+            </a>
+
+            <p>
+                Membawa cita rasa khas Palembang
+                dari lokal menuju dunia.
+            </p>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h4>Menu</h4>
+
+            <a href="#menu">Pempek</a>
+            <a href="#menu">Paket</a>
+            <a href="#menu">Minuman</a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h4>Informasi</h4>
+
+            <a href="#proses">Tentang Kami</a>
+            <
