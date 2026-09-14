@@ -114,11 +114,11 @@ orderButtons.forEach(button => {
 
 
         const phone =
-            "6281234567890";
+            "6289688204332";
 
 
         const message =
-            `Halo Pempek Kita 👋
+            `Halo Pempek Kito 👋
 
 Saya ingin memesan:
 ${product}
