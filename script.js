@@ -1,183 +1,215 @@
-/* =========================
-   MOBILE MENU
-========================= */
-
-const hamburger = document.getElementById("hamburger");
-const navMenu = document.querySelector(".nav-menu");
-
-hamburger.addEventListener("click", () => {
-
-    navMenu.classList.toggle("mobile-active");
-
-});
+/* =====================================================
+   PEMPEK UNPAM
+   MAIN JAVASCRIPT
+===================================================== */
 
 
-/* =========================
-   PRODUCT FILTER
-========================= */
+/* =====================================================
+   WHATSAPP NUMBER
+===================================================== */
 
-const categoryButtons =
-    document.querySelectorAll(".category");
-
-const products =
-    document.querySelectorAll(".product-card");
+// GANTI NOMOR INI
+const whatsappNumber = "6289688204332";
 
 
-categoryButtons.forEach(button => {
+/* =====================================================
+   LANGUAGE SYSTEM
+===================================================== */
 
-    button.addEventListener("click", () => {
+const idButton = document.getElementById("idBtn");
+const enButton = document.getElementById("enBtn");
 
-        categoryButtons.forEach(btn => {
-            btn.classList.remove("active");
-        });
+const translatedElements =
+    document.querySelectorAll("[data-id][data-en]");
 
-        button.classList.add("active");
 
-        const filter =
-            button.dataset.filter;
+function changeLanguage(language) {
 
-        products.forEach(product => {
+    translatedElements.forEach(element => {
 
-            const category =
-                product.dataset.category;
+        if (language === "id") {
 
-            if (
-                filter === "all" ||
-                category === filter
-            ) {
+            element.textContent =
+                element.dataset.id;
 
-                product.style.display = "block";
+        } else {
 
-            } else {
+            element.textContent =
+                element.dataset.en;
 
-                product.style.display = "none";
-
-            }
-
-        });
+        }
 
     });
 
-});
 
+    if (language === "id") {
 
-/* =========================
-   FAQ ACCORDION
-========================= */
+        idButton.classList.add("active");
+        enButton.classList.remove("active");
 
-const faqQuestions =
-    document.querySelectorAll(".faq-question");
-
-
-faqQuestions.forEach(question => {
-
-    question.addEventListener("click", () => {
-
-        const currentItem =
-            question.parentElement;
-
-
-        document
-            .querySelectorAll(".faq-item")
-            .forEach(item => {
-
-                if (item !== currentItem) {
-
-                    item.classList.remove("open");
-
-                }
-
-            });
-
-
-        currentItem.classList.toggle("open");
-
-    });
-
-});
-
-
-/* =========================
-   ORDER BUTTON
-========================= */
-
-const orderButtons =
-    document.querySelectorAll(".order-button");
-
-
-orderButtons.forEach(button => {
-
-    button.addEventListener("click", () => {
-
-        const product =
-            button.dataset.product;
-
-
-        const phone =
-            "6289688204332";
-
-
-        const message =
-            `Halo Pempek Kito 👋
-
-Saya ingin memesan:
-${product}
-
-Mohon informasi harga dan ketersediaannya.
-
-Terima kasih.`;
-
-
-        const whatsappURL =
-            `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
-
-
-        window.open(
-            whatsappURL,
-            "_blank"
-        );
-
-    });
-
-});
-
-
-/* =========================
-   NAVBAR SHADOW
-========================= */
-
-window.addEventListener("scroll", () => {
-
-    const navbar =
-        document.getElementById("navbar");
-
-    if (window.scrollY > 30) {
-
-        navbar.style.boxShadow =
-            "0 5px 25px rgba(0,0,0,.08)";
+        document.documentElement.lang = "id";
 
     } else {
 
-        navbar.style.boxShadow =
-            "none";
+        enButton.classList.add("active");
+        idButton.classList.remove("active");
+
+        document.documentElement.lang = "en";
+
+    }
+
+}
+
+
+idButton.addEventListener("click", () => {
+
+    changeLanguage("id");
+
+});
+
+
+enButton.addEventListener("click", () => {
+
+    changeLanguage("en");
+
+});
+
+
+/* =====================================================
+   WHATSAPP MESSAGE
+===================================================== */
+
+function openWhatsApp(message) {
+
+    const url =
+        `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+
+    window.open(url, "_blank");
+
+}
+
+
+/* =====================================================
+   WHATSAPP BUTTONS
+===================================================== */
+
+const whatsappLinks =
+    document.querySelectorAll(".whatsapp-link");
+
+
+whatsappLinks.forEach(link => {
+
+    link.addEventListener("click", function(event) {
+
+        event.preventDefault();
+
+        const isEnglish =
+            document.documentElement.lang === "en";
+
+
+        let message;
+
+
+        if (isEnglish) {
+
+            message =
+                "Hello Pempek UNPAM! 👋\n\nI would like to ask about your products and how to order.";
+
+        } else {
+
+            message =
+                "Halo Pempek UNPAM! 👋\n\nSaya ingin bertanya mengenai produk dan cara pemesanannya.";
+
+        }
+
+
+        openWhatsApp(message);
+
+    });
+
+});
+
+
+/* =====================================================
+   WHATSAPP POPUP
+===================================================== */
+
+const whatsappButton =
+    document.getElementById("whatsappButton");
+
+const whatsappPopup =
+    document.getElementById("whatsappPopup");
+
+const popupClose =
+    document.getElementById("popupClose");
+
+
+whatsappButton.addEventListener("click", () => {
+
+    whatsappPopup.classList.toggle("show");
+
+});
+
+
+popupClose.addEventListener("click", () => {
+
+    whatsappPopup.classList.remove("show");
+
+});
+
+
+/* Klik di luar popup */
+
+document.addEventListener("click", event => {
+
+    const clickedInside =
+        whatsappPopup.contains(event.target);
+
+    const clickedButton =
+        whatsappButton.contains(event.target);
+
+
+    if (!clickedInside && !clickedButton) {
+
+        whatsappPopup.classList.remove("show");
 
     }
 
 });
 
 
-/* =========================
-   MOBILE NAV STYLE
-========================= */
+/* =====================================================
+   MOBILE MENU
+===================================================== */
 
-const style =
+const mobileButton =
+    document.getElementById("mobileMenuBtn");
+
+
+const navigation =
+    document.querySelector(".nav");
+
+
+mobileButton.addEventListener("click", () => {
+
+    navigation.classList.toggle("mobile-open");
+
+});
+
+
+/* =====================================================
+   MOBILE NAVIGATION STYLE
+===================================================== */
+
+const mobileStyle =
     document.createElement("style");
 
-style.innerHTML = `
 
-@media(max-width:900px){
+mobileStyle.innerHTML = `
 
-    .nav-menu.mobile-active{
+@media(max-width:850px){
+
+    .nav.mobile-open{
 
         display:flex;
 
@@ -191,15 +223,15 @@ style.innerHTML = `
 
         padding:25px;
 
-        background:#f8f4ed;
-
         flex-direction:column;
 
         gap:20px;
 
-        border-bottom:1px solid #ddd;
+        background:#f5f3ed;
 
-        box-shadow:0 10px 30px rgba(0,0,0,.08);
+        border-bottom:1px solid rgba(28,33,30,.13);
+
+        box-shadow:0 15px 30px rgba(0,0,0,.08);
 
     }
 
@@ -207,4 +239,96 @@ style.innerHTML = `
 
 `;
 
-document.head.appendChild(style);
+
+document.head.appendChild(mobileStyle);
+
+
+/* =====================================================
+   CLOSE MOBILE MENU WHEN LINK CLICKED
+===================================================== */
+
+document.querySelectorAll(".nav a").forEach(link => {
+
+    link.addEventListener("click", () => {
+
+        navigation.classList.remove("mobile-open");
+
+    });
+
+});
+
+
+/* =====================================================
+   SCROLL REVEAL
+===================================================== */
+
+const revealElements =
+    document.querySelectorAll(
+        ".product-card, .experience-card, .about-content, .about-image"
+    );
+
+
+const observer =
+    new IntersectionObserver(
+        entries => {
+
+            entries.forEach(entry => {
+
+                if (entry.isIntersecting) {
+
+                    entry.target.classList.add("visible");
+
+                }
+
+            });
+
+        },
+        {
+            threshold: .12
+        }
+    );
+
+
+revealElements.forEach(element => {
+
+    element.classList.add("reveal");
+
+    observer.observe(element);
+
+});
+
+
+/* =====================================================
+   REVEAL STYLE
+===================================================== */
+
+const revealStyle =
+    document.createElement("style");
+
+
+revealStyle.innerHTML = `
+
+.reveal{
+
+    opacity:0;
+
+    transform:translateY(25px);
+
+    transition:
+        opacity .7s ease,
+        transform .7s ease;
+
+}
+
+.reveal.visible{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+`;
+
+
+document.head.appendChild(revealStyle);
